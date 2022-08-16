@@ -1,24 +1,26 @@
-# Supplementary Materials
+# Applicative Intersection Types (Artifact)
 
-This is the folder of supplementary materials for the paper "Applicative Intersection Types"
+This is the folder of artifact for the paper **Applicative Intersection Types**
 
-## Structure
+## Overview
 
-`core`: Coq Proof of the first calculus
+`core`: Coq proof of the first calculus
 
-`core+disjoint`: Coq Proof of the second calculus
+`core+disjoint`: Coq proof of the second calculus
 
-`subtyping`: Coq Proof of properties of applicative subtyping
+`subtyping`: Coq proof of properties of applicative subtyping
 
-## Warming Reminder
+## Warm Reminder
 
-We encourage readers to **use the generated coqdoc files** for quickly accessing our Proof.
+We encourage reviewers to **use the generated coqdoc files** for quickly accessing our Proof.
 
 Simply open the `coqdoc/toc.html` in each folder.
 
-Of course, readers can build the proof by themselves.
+## Build Guide (Docker)
 
-## Build Guide
+We provide a Dockerfile and a docker image.
+
+## Build Guide (Local)
 
 The recommended Coq version is **8.15.0**. The newer one should also be fine.
 
