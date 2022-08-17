@@ -1,6 +1,6 @@
 # Applicative Intersection Types (Artifact)
 
-This is the folder of artifact for the paper **Applicative Intersection Types**
+This is the folder of artifact for the paper **Applicative Intersection Types**, all lemmas and properties shown in the paper can be found in the artifact.
 
 ## Overview
 
@@ -18,7 +18,7 @@ There are five Coq projects in our artifact and each is documented by coqdoc.
 
 ## Warm Reminder
 
-We encourage reviewers to **use the generated coqdoc files** for quickly accessing our Proof.
+We encourage readers to **use the generated coqdoc files** for quickly accessing our Proof.
 
 Simply open the `coqdoc/toc.html` in each folder.
 
@@ -28,7 +28,14 @@ We provide a Dockerfile and a docker image.
 
 You can build from Dockerfile `docker build -t artifactapp .` then enter into the image,
 
-or directly pull the image `docker pull juniorxxue/applicative-intersection:latest`
+or directly pull the image from DockerHub
+
+````shell
+$ docker pull juniorxxue/applicative-intersection:latest
+$ docker run -it juniorxxue/applicative-intersection
+$ make clean
+$ make
+````
 
 ## Build Guide (Local)
 
@@ -43,11 +50,11 @@ RUN opam install coq-metalib
 
 Then run `make` in the project root, which will run `make` in different Coq projects.
 
-## Lemmas in the Paper
+## Step-by-Step Instructions
 
 Our Coq formalization is readable and easy to locate.
 
-We provide the basic information on lemmas shown in the paper.
+We provide the connection between lemmas shown in the paper and Coq file.
 
 | Lemma No.               | File Location                                  | Generated Coqdoc Files                                   |
 | ----------------------- | ---------------------------------------------- | -------------------------------------------------------- |
