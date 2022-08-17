@@ -4,11 +4,17 @@ This is the folder of artifact for the paper **Applicative Intersection Types**
 
 ## Overview
 
+There are five Coq projects in our artifact and each is documented by coqdoc.
+
 `core`: Coq proof of the first calculus
 
 `core+disjoint`: Coq proof of the second calculus
 
-`subtyping`: Coq proof of properties of applicative subtyping
+`subtyping/normal`: Coq proof of properties of applicative subtyping WRT subtyping without distribuitivity.
+
+`subtyping/normal+distri`: Coq proof of properties of applicative subtyping WRT subtyping with distribuivity.
+
+`subtyping/normal+distri+toplike`: Coq proof of properties of applicative subtyping WRT subtyping with distribuivity and top-like rule.
 
 ## Warm Reminder
 
@@ -20,15 +26,22 @@ Simply open the `coqdoc/toc.html` in each folder.
 
 We provide a Dockerfile and a docker image.
 
+You can build from Dockerfile `docker build -t artifactapp .` then enter into the image,
+
+or directly pull the image `docker pull juniorxxue/applicative-intersection:latest`
+
 ## Build Guide (Local)
 
-The recommended Coq version is **8.15.0**. The newer one should also be fine.
+The recommended Coq version is **8.15.0**. The newer one should also be fine. We use the `metalib` to formalize our calculi.
 
-We use the `metalib` to formalize our calculi.
+Metalib can be installed from https://github.com/plclub/metalib or opam
 
-Readers may follow the guide of "https://github.com/plclub/metalib" to install the latest version.
+```
+RUN opam repo add coq-extra-dev https://coq.inria.fr/opam/extra-dev
+RUN opam install coq-metalib
+```
 
-And run `make` in the `Proof` folders
+Then run `make` in the project root, which will run `make` in different Coq projects.
 
 ## Lemmas in the Paper
 
