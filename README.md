@@ -90,7 +90,7 @@ We provide the connection between lemmas shown in the paper and Coq file.
 To interact with the Coq proof, often we use the code editor with plugins installed.
 
 * Emacs with ProofGeneral plugins (https://proofgeneral.github.io/)
-* VSCode with VSCoq plugins (https://github.com/coq-community/vscoq)
+* VSCode with VSCoq plugins (https://github.com/coq-community/vscoq), and (https://github.com/coq-community/vscoq#basic-usage) provides the basic commands
 
 After ensuring the `metalib` and `coqtop` is installed, open the Coq file and run commands listed in the tool references.
 
